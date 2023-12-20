@@ -276,8 +276,8 @@ a {
 
 
 .work {
-    width: 70%;
-    height: 250px;
+    width: calc(40% + 10px);
+    height: calc(80% + 50px);
     position: relative;
     margin: auto;
     border: 1px solid #000;
@@ -294,7 +294,7 @@ a {
 .anim {
     width: calc(100% - 9px); 
     height: calc(90% - 62px); 
-    border: 5px solid red;
+    border: 5px solid rgb(54, 61, 255);
     position: absolute;
     bottom: 0;
     pointer-events: all;
@@ -313,7 +313,7 @@ button {
     left: 15px;
     padding: 10px 20px;
     border-radius: 16px;
-    font-size: 12px;
+    font-size: 8px;
     cursor: pointer;
 }
 
@@ -347,19 +347,18 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     padding: 10px 20px;
 }
 
 
 #statusMessage {
     position: absolute;
-    top: 10px;
+    top: 35px;
     right: 20px;
     padding: 10px 20px;
     border-radius: 16px;
     background-color: #ffcc00; 
-    font-size: 12px;
+    font-size: 8px;
 }
 
 
