@@ -115,13 +115,20 @@ document.addEventListener("DOMContentLoaded", function () {
         if (distanceToLeft < 0) {
             angle = Math.PI - angle;
             setStatusMessage(color + ': Стук!');
-            direction *= -1;  // Змінюємо напрямок руху
+            setTimeout(function () {
+                setStatusMessage('Рух!');
+            }, 300);
+            direction *= -1;
             angle = getRandomAngle();
             x = radius;
         } else if (distanceToRight < 0) {
             angle = Math.PI - angle;
             setStatusMessage(color + ': Стук!');
-            direction *= -1;  // Змінюємо напрямок руху
+            setTimeout(function () {
+                setStatusMessage('Рух!');
+                isHit = false;
+            }, 300);
+            direction *= -1;
             angle = getRandomAngle();
             x = canvas.width - radius;
         }
@@ -129,13 +136,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (distanceToTop < 0) {
             angle = 2 * Math.PI - angle;
             setStatusMessage(color + ': Стук!');
-            direction *= -1;  // Змінюємо напрямок руху
+            setTimeout(function () {
+                setStatusMessage('Рух!');
+                isHit = false;
+            }, 300);
+            direction *= -1;
             angle = getRandomAngle();
             y = radius;
         } else if (distanceToBottom < 0) {
             angle = 2 * Math.PI - angle;
             setStatusMessage(color + ': Стук!');
-            direction *= -1;  // Змінюємо напрямок руху
+            setTimeout(function () {
+                setStatusMessage('Рух!');
+                isHit = false;
+            }, 300);
+            direction *= -1;
             angle = getRandomAngle();
             y = canvas.height - radius;
         }
@@ -162,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
         var distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < 2 * radius) {
-            // М'ячики перетинаються, змінюємо напрямок руху
             directionOrange *= -1;
             directionBlue *= -1;
             angleOrange = getRandomAngle();
