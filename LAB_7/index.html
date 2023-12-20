@@ -18,7 +18,7 @@
         <a href="index.html"><h1 class="rect1">HYBE LABELS</h1></a>
         <img src="img/logo.png" alt="HYBE Labels" class="logo">
     </header>
-     
+    
     <main>
         <div class="border_left">
             <p class="top_text">Top rank</p>
@@ -38,19 +38,19 @@
             <div class="wrapper456">
                 <div class="wrapper46">
                     <div class="center">
-                        <div class="work">
-                            
+                        <button id="playButton">Play</button>
+                        <div class="work" id="workArea" style="display: none;">
+                            <button id="startButton">Start</button>
+                            <button id="stopButton">Stop</button>
+                            <button id="reloadButton">Reload</button>
                             <div class="anim" id="animatedBlock">
                                 <canvas id="animationCanvas"></canvas>
                             </div>
-                            <div class="controls">
-                                <button id="startButton">Start</button>
-                                <button id="stopButton">Stop</button>
-                                <button id="reloadButton">Reload</button>
-                                <div id="statusMessage"></div>
-                            </div>
+                            <div id="statusMessage"></div>
                         </div>
+                        
                     </div>
+                    
                     
                     <div class="under_footer">
                         <p class="quote">“We connected, expanded and established a relationship”</p>
@@ -88,6 +88,3 @@
             <p class="rights">© HYBE. All Rights Reserved</p>
         </div>
     </footer>
-
-</body>
-</html>

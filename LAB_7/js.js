@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var animatedBlock = document.getElementById('animatedBlock');
     var canvas = document.getElementById('animationCanvas');
     var ctx = canvas.getContext('2d');
-    var radius = 5;
+    var radius = 10;
 
     var xOrange = canvas.width / 3;
     var yOrange = canvas.height / 2;
@@ -17,9 +17,11 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.width = animatedBlock.clientWidth - 10; 
     canvas.height = animatedBlock.clientHeight - 50; 
 
+    var playButton = document.getElementById('playButton');
     var startButton = document.getElementById('startButton');
     var stopButton = document.getElementById('stopButton');
     var reloadButton = document.getElementById('reloadButton');
+    var workArea = document.getElementById('workArea');
 
     var statusMessage = document.getElementById('statusMessage');
     var isRunning = false; 
@@ -37,6 +39,13 @@ document.addEventListener("DOMContentLoaded", function () {
     updateButtons();
     setStatusMessage('Очікую...');
 
+    playButton.addEventListener('click', function() {
+        workArea.style.display = 'block';
+        startButton.style.display = 'inline-block';
+        reloadButton.style.display = 'inline-block';
+        playButton.style.display = 'none';
+    });
+    
     startButton.addEventListener('click', function () {
         isRunning = true;
         updateButtons();
