@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var angleBlue = Math.random() * 2 * Math.PI;
     var speedBlue = 2;
 
-    var directionOrange = 1;  // Напрямок руху для оранжевого м'ячика (1 або -1)
-    var directionBlue = 1;    // Напрямок руху для синього м'ячика (1 або -1)
+    var directionOrange = 1; 
+    var directionBlue = 1;
 
     canvas.width = animatedBlock.clientWidth - 10;
     canvas.height = animatedBlock.clientHeight - 50;
